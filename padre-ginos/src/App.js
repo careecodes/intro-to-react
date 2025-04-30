@@ -1,9 +1,6 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 
-// modify the createRoot call, delete "ReactDOM"
-const root = createRoot(container);
-
 const Pizza = (stuff) => {
   return React.createElement("div", {}, [
     React.createElement("h1", {}, stuff.name),
@@ -30,4 +27,5 @@ const App = () => {
 };
 
 const container = document.getElementById("root");
+const root = createRoot(container);
 root.render(React.createElement(App));
